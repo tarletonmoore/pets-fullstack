@@ -3,9 +3,9 @@
 <ul>
   <% @pets.each do |pet| %>
     <li>
-      <a href="/pets/<%= pet.id %>">
-        <%= pet.name %>
-      </a>
+      <%= link_to pet.name, pet %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "New Pet", new_pet_path %>
