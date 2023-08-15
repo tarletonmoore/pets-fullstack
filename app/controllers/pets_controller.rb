@@ -12,6 +12,7 @@ class PetsController < ApplicationController
   end
 
   def create
+    # @pet = Pet.new(name: params[:name], breed: params[:breed], image_url: params[:image_url], user_id: current_user.id)
     @pet = Pet.new(pet_params)
 
     if @pet.save
